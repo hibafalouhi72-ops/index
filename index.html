@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Hiba Falouhi</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Base ===== */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    /* ===== Navbar ===== */
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05em;
+      transition: all 0.3s ease;
+    }
+
+    header a:hover {
+      color: #ffe4f2;
+      transform: scale(1.08);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 60px;
+      background: linear-gradient(180deg, #fff0f6 0%, #ffffff 100%);
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff69b4;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+
+    .hero h1 {
+      margin-top: 25px;
+      color: #ff69b4;
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.05em;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+
+    /* ===== Section Titles ===== */
+    section h2 {
+      text-align: center;
+      color: #ff69b4;
+      margin-bottom: 30px;
+      font-size: 1.8em;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: #ff69b4;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ===== Cards ===== */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 0 20px 50px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      flex: 1 1 280px;
+      max-width: 320px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 170px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      color: #ff69b4;
+      margin-bottom: 8px;
+      font-size: 1.15em;
+    }
+
+    .project-card p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    /* ===== Contact ===== */
+    #contact {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fff0f6;
+    }
+
+    #contact p {
+      font-size: 1em;
+      margin: 8px 0;
+    }
+
+    #contact a {
+      color: #ff69b4;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.95em;
+      letter-spacing: 0.4px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      header { gap: 20px; font-size: 0.9em; }
+      .hero img { width: 130px; height: 130px; }
+      .hero h1 { font-size: 1.6em; }
+      section h2 { font-size: 1.5em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header>
+    <a href="#projects">Projets</a>
+    <a href="#competences">Compétences</a>
+    <a href="#contact">Contact</a>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <img src="hiba.jpg" alt="Photo de Hiba Falouhi">
+    <h1>Hiba Falouhi</h1>
+    <p>Développeuse Full Stack débutante, passionnée par la création d’expériences web modernes, élégantes et intuitives.</p>
+  </section>
+
+  <!-- ===== Compétences ===== -->
+  <section id="competences">
+    <h2>Mes Compétences</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>HTML / CSS</h3>
+        <p>Création de sites modernes, responsives et élégants, respectant les bonnes pratiques du web.</p>
+      </div>
+      <div class="project-card">
+        <h3>JavaScript</h3>
+        <p>Gestion d’interactions dynamiques, manipulation du DOM et logique côté client.</p>
+      </div>
+      <div class="project-card">
+        <h3>ReactJS</h3>
+        <p>Conception de composants réutilisables et interfaces dynamiques pour des applications modernes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projets ===== -->
+  <section id="projects">
+  <h2>Mes Projets</h2>
+  <div class="projects">
+
+    <!-- Projet 1 -->
+    <a href="hiba.html" target="_blank" class="project-card">
+      <img src="site.png" alt="Agence Digital Pro">
+      <h3>Agence Digital Pro</h3>
+      <p>Site vitrine pour la création de sites web avec formulaire de devis interactif.</p>
+    </a>
+
+    <!-- Projet 2 -->
+    <a href="JEUXGESS.html" target="_blank" class="project-card">
+      <img src="jeuxguess.png" alt="Jeu de Nombres">
+      <h3>Jeu de Nombres</h3>
+      <p>Mini-jeu JavaScript où l’utilisateur doit deviner le bon nombre.</p>
+    </a>
+
+    <!-- Projet 3 -->
+    <a href="JEUX.html" target="_blank" class="project-card">
+      <img src="reflexe.png" alt="Jeu de Réflexe">
+      <h3>Jeu de Réflexe</h3>
+      <p>Jeu simple pour tester la rapidité et la concentration.</p>
+    </a>
+
+  </div>
+</section>
+
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:hibafalouhi72@gmail.com">hibafalouhi72@gmail.com</a></p>
+    <p>Téléphone : +212 6XXXXXXXX</p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    © 2025 Hiba Falouhi — Tous droits réservés
+  </footer>
+
+</body>
+</html>
